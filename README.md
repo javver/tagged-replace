@@ -15,7 +15,7 @@ var myServer = /*host*/ '' /*/host*/;
 
 ```js
 var fs = require('fs');
-var taggedReplace = require('');
+var taggedReplace = require('tagged-replace');
 
 var content = fs.readFileSync('./configuration.js');
 console.log( taggedReplace( content, { host: '\'myhost.example.com\'' } ) );
