@@ -7,7 +7,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "nyc npm test && nyc report --reporter=html",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "files": [
     "index.js"
@@ -31,7 +33,9 @@
   "homepage": "https://github.com/javver/tagged-replace#readme",
   "devDependencies": {
     "coveralls": "^2.11.8",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.2.0",
+    "nyc": "^6.1.1"
   },
   "dependencies": {
     "lodash.defaults": "^4.0.1"

@@ -45,4 +45,24 @@ describe('taggedReplace', function() {
       assert.equal(taggedReplace(filecontent, values), expected, 'single value');
    });
 
+   it('can configure if tags have a space padding the content in the result', function() {
+      var input = 'Lorem /*ipsum*/ ipsum /*/ipsum*/ dolor sit amet';
+      var output = taggedReplace(input, {
+         ipsum: 'inventore'
+      }, {
+         space: true
+      });
+      var expected = 'Lorem /*ipsum*/ inventore /*/ipsum*/ dolor sit amet';
+      assert.equal(output, expected);
+
+      input = 'Lorem /*ipsum*/ ipsum /*/ipsum*/ dolor sit amet';
+      output = taggedReplace(input, {
+         ipsum: 'inventore'
+      }, {
+         space: false
+      });
+      expected = 'Lorem /*ipsum*/inventore/*/ipsum*/ dolor sit amet';
+      assert.equal(output, expected);
+   });
+
 });
