@@ -1,0 +1,39 @@
+{
+  "name": "tagged-replace",
+  "version": "0.1.0",
+  "description": "Javascript text replacement searching for tags.",
+  "main": "taggedReplace.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javver/tagged-replace.git"
+  },
+  "keywords": [
+    "utility",
+    "text",
+    "replace",
+    "comments",
+    "tags"
+  ],
+  "author": "Javier Cardona",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javver/tagged-replace/issues"
+  },
+  "homepage": "https://github.com/javver/tagged-replace#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.8",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "lodash.defaults": "^4.0.1"
+  }
+}
